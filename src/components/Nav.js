@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import logo from '../logo.svg'
 
-const Nav=()=>{
-    const [menuOpen,setMenuOpen]=useState(false);
-    const toggleMenu=()=>{setMenuOpen(!menuOpen);
-    }
+    const Nav=()=>{
+        const [menuOpen,setMenuOpen]=useState(false);
+        const toggleMenu=()=>{setMenuOpen(!menuOpen);
+        }
     return (
         <nav className={` navbar ${menuOpen ? "open" : ""}`}>
-            <a href='/' className="logo">
-            <img src={logo} alt="Logo" />
-            </a>
+            
             <div className="menu-icon" onClick={toggleMenu}>
                 <div className='bar'></div>
                 <div className='bar'></div>
@@ -41,5 +38,4 @@ const Nav=()=>{
         </nav>
     )
 }
-
 export default Nav;
