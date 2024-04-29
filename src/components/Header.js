@@ -1,16 +1,16 @@
 import React from 'react';
-import bannerImg from '../images/restauranfood.jpg'
+import bannerImg from '../images/Placeholder.jpg'
 const Header=() => {
     return (
         <header className='header'>
             <section>
                 <div className='banner'>
-                    <h2>Little Lemon</h2>
-                    <h3>Chicago</h3>
-                    <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                    <a href="/booking">
+                    <h2>Title</h2>
+                    <h3>Subtitle</h3>
+                    <p>Description</p>
+                    <a href="/Temporary">
                     <button aria-label='On Click'>
-                        Reserve Table
+                        Button
                     </button>
                     </a>
                 </div>
