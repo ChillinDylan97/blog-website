@@ -8,12 +8,13 @@ li{
 a{
   text-decoration: none;
 }
+/* Navbar */
 nav{
   z-index: 10001;
 }
 .navbar {
-  padding: 10px 13%;
-  display: flex;
+  padding: 15px 13%;
+  display: grid;
   justify-content: space-between;
   align-items: center;
 }
@@ -58,25 +59,23 @@ nav ul li a:hover{
   align-items: center;
   transition: all 0.3s ease-in-out;
 }
-
+/* Header */
 .header {
-  background-color: #495e57;
+  background-color: #F1F1F1;
   padding: 40px 0;
+  color: #000;
 }
 
 .header section {
 color: #EDEFEE;
 padding: 10px 13%;
 position: relative;
+margin: 0px 250px 0px;
 }
 
 h2 {
-  color: #F4CE14;
+  color: #7BABF3;
   font-size: 40px;
-}
-
-h3 {
-  font-size: 25px;
 }
 
 .banner p {
@@ -84,9 +83,10 @@ h3 {
   max-width: 520px;
   line-height: 1.5;
   margin-bottom: 30px;
+  color:#000;
 }
 button {
-  background-color: #F4CE14;
+  background-color: #7BABF3;
   color: black;
   padding: 14px 18px;
   border: none;
@@ -102,6 +102,7 @@ button {
   right: 13%;
   top: 15%;
   width: 400px;
+
 }
 
 .banner-img img {
@@ -110,54 +111,18 @@ button {
   border-radius: 20px;
 }
 
-form, .comfirm{
-  padding: 10px 13%;
-}
+/* Main */
 
-.formField{
-  padding: 50px 20px;
-}
-
-input, label{
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-#book-date, #book-time, #book-guests, #book-occasion{
-  background: #bdbdbd43;
-  padding: 8px 24px;
-  border: none;
-  outline: none;
-  border-radius: 2px;
-}
-.btnReceive input{
-  padding: 12px 16px;
-  margin-top: 20px;
-  background: #495e57;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
-
-.comfirm span{
-  color: blue;
-}
-
-.menu-container{
+.post-container{
   margin: 110px auto;
   padding: 10px 13%;
 }
 
-.menu-container h2{
+.post-container h2{
   color: #000;
 }
 
-.menu-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+
 .cards{
   margin-top: 30px;
   display: flex;
@@ -167,24 +132,39 @@ input, label{
   gap: 2rem 1rem;
 }
 
-.menu-items{
-  width: 350px;
-  background: #a9c8be;
+.post-items{
+  background: #EDEFEE;
   border-radius: 8px;
 }
 
-.menu-container img{
-  width: 100%;
-  height: 233px;
-  border-radius: 8px;
+.post-container img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.menu-content{
-  padding: 5px 15px;
+.post-content{
+  padding: 15px 30px 15px;
 }
-.menu-content .heading{
+.post-content .heading{
   display: flex;
   justify-content: space-between;
+}
+
+.post-container h2 {
+  margin: 0px 0px 25px;
+}
+
+.date h5 {
+  margin: 0px 0px 20px;
+}
+
+.post-footer{
+  border-top: 1px solid #000;
+  padding: 10px 0px 0px 0px;
+  display:grid;
 }
 
 .orderbtn{
@@ -193,22 +173,33 @@ input, label{
   font-size: 16px;
   font-weight: 600;
 }
+/* Footer */
 
 footer section{
   padding: 10px 13%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: start;
+
+  background-color: #EDEFEE;
 }
 
-.company-info img{
+.author-info img{
+  padding: 10px;
   margin-top: 12px;
   cursor: pointer;
   width: 200px;
 }
 
-.company-info p{
+.author-info p{
+  padding: 10px;
   width: 320px;
+  
+}
+
+h3 {
+  
+  font-size: 25px;
 }
 
 footer h3{
@@ -223,67 +214,4 @@ footer ul li{
   padding: 8px 0;
 }
 
-@media screen and (max-width: 768px){
-  .menu-icon {
-    display: block;
-  }
-.nav-links {
-    display: none;
-  }
-.nav-links.visible {
-    display: flex;
-    background: #333333;
-    z-index: 1000;
-    padding: 20px 0;
- }
 
-.navbar{
-    background:#fff;
-    padding: 10px 8%;
- }
-
-nav ul li a{
-    color: #fff;
-  }
-
-.bar{
-    background: #333333;
-  }
-
-.banner-img{
-    display: none;
-  }
-
-form, .comfirm{
-    padding: 10px 8%;
-  }
-
-.header section, .menu-container{
-    padding: 10px 8%;
-  }
-.menu-container{
-    margin: 20px 0;
-  }
-.confirmation span{
-  color:yellow;
-}
-.menu-header{
-    justify-content: flex-start;
-}
-
-.menu-items{
-    width: 100%;
-}
-
-footer section{
-    padding: 10px 8%;
-    flex-direction: column;
-  }
-.company-info p{
-    width: 100%;
-  }
-}
-
-.hidden{
-  display: none;
-}

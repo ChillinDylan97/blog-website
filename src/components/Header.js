@@ -9,9 +9,7 @@ const Header=() => {
                     <h3>Subtitle</h3>
                     <p>Description</p>
                     <a href="/Temporary">
-                    <button aria-label='On Click'>
-                        Button
-                    </button>
+
                     </a>
                 </div>
                 <div className='banner-img'>

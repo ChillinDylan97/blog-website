@@ -5,10 +5,9 @@ import Nav from './Nav';
 import Footer from './Footer';
 const About=()=>{
     return(
-        
+
             <header>
-        
-        
+
           <Nav/>
           <header className='header'>
             <section>
@@ -28,13 +27,9 @@ const About=()=>{
             </section>
         </header>
           <Footer/>
-    
-        
+
           </header>
-         
-      
-           
-        
+
     )
 }
 export default About;

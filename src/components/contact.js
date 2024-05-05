@@ -3,12 +3,12 @@ import bannerImg from '../images/Placeholder.jpg'
 
 import Nav from './Nav';
 import Footer from './Footer';
+
 const Contact=()=>{
     return(
-        
+
             <header>
-        
-        
+
           <Nav/>
           <header className='header'>
             <section>
@@ -28,13 +28,9 @@ const Contact=()=>{
             </section>
         </header>
           <Footer/>
-    
-        
+
           </header>
-         
-      
-           
-        
+
     )
 }
 export default Contact;

@@ -4,29 +4,21 @@ const Footer=()=>{
     return (
     <footer>
         <section>
-            <div className='company-info'>
+            <div className='author-info'>
                 <img src={logo} alt=''/>
-                <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div>
                 <h3>Important Links</h3>
                 <ul>
                     <li><a href='/'>Home</a></li>
                     <li><a href='/'>About</a></li>
-                    <li><a href='/'>Menu</a></li>
-                    <li><a href='/'>Reservations</a></li>
-                    <li><a href='/'>Order Online</a></li>
-                    <li><a href='/'>Login</a></li>
+                    <li><a href='/'>Contact</a></li>
+                    <li><a href='/'>Subscribe</a></li>
+                    
                 </ul>
             </div>
-            <div>
-                <h3>Contact</h3>
-                <ul>
-                    <li>Address:<br/>555 Fake Road, New York, USA</li>
-                    <li>Phone:<br/> 1 800 555-0913</li>
-                    <li>Email:<br/> littlelemon@fakemail.com</li>
-                </ul>
-            </div>
+            
             <div>
                 <h3>Social Media</h3>
                 <ul>
