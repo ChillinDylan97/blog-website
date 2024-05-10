@@ -6,8 +6,8 @@ const form = useRef();
 
 const sendEmail = (e) => {
 e.preventDefault();
-emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 
-'YOUR_PUBLIC_KEY')
+emailjs.sendForm('service_eywea47', 'template_8u16o7h', form.current, 
+'3Nm37d0HDDslTmzjt')
   .then((result) => {
       console.log(result.text);
   }, (error) => {

@@ -1,5 +1,7 @@
 import React from 'react';
 import post from '../post';
+import CommentSection from './CommentSection';
+
 
 const Main=()=> {
 
@@ -25,16 +27,17 @@ const Main=()=> {
                                 <a href="https://www.linkedin.com/in/dylanjgilbert/" rel="tag">tag placeholder</a>, &nbsp;
                                 <a href="https://www.linkedin.com/in/dylanjgilbert/" rel="tag">tag placeholder 2</a> &nbsp;
                             </span>
-                            <span className="comments">Comments(0)&nbsp;
-                            
-                            </span>
+                           
+                            <CommentSection post={post}/>
                         </footer>
+                        
                     </div>
                     </div>)
                 }
         </div>
     </div>
     );
+
 }
 export default Main;
 /* div content*/
@@ -47,4 +50,11 @@ export default Main;
 /* div content*/
 /* div content*/
 
+/* Add posts */
+/* search posts */
+    /* search tags*/
+/* (DONE)Add comments */
+/* (DONE) Send contact request */
 
+/*Likes? */
+/* (DONE)Comment Likes? */
