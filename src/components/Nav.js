@@ -15,6 +15,7 @@ import SearchBar from "./SearchBar";
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
+                <div className='bar'></div>
             </div>
         
             <ul className={`nav-links ${menuOpen ? "visible":""}`}>
@@ -27,6 +28,9 @@ import SearchBar from "./SearchBar";
                 </li>
             <li>
                 <Link to="/contact">Contact</Link>
+                </li>
+                <li>
+                <Link to="/CreatePost">Create Post</Link>
                 </li>
             </ul>
         </nav>

@@ -6,7 +6,7 @@ const form = useRef();
 
 const sendEmail = (e) => {
 e.preventDefault();
-emailjs.sendForm('service_eywea47', 'template_8u16o7h', form.current, 
+emailjs.sendForm('service_eywea47', 'template_8u16o7h', form.current,
 '3Nm37d0HDDslTmzjt')
   .then((result) => {
       console.log(result.text);
