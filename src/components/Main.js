@@ -10,7 +10,7 @@ const Main=()=> {
 <div className='post-container'>
 
         <div className = 'cards'>
-            {
+            { 
                 post.map(post=><div key={post.id} className='post-items'>
 
                     <div className='post-content'>

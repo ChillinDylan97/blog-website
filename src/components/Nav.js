@@ -7,17 +7,15 @@ import SearchBar from "./SearchBar";
         }
     return (
         <nav className={` navbar ${menuOpen ? "open" : ""}`}>
-            
-            
-            
+
             <div className="menu-icon" onClick={toggleMenu}>
-                
+
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
             </div>
-        
+
             <ul className={`nav-links ${menuOpen ? "visible":""}`}>
             <SearchBar />
             <li>

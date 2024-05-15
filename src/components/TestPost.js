@@ -1,12 +1,16 @@
 import React from 'react';
 import post from '../post';
 import CommentSection from './CommentSection';
+import Nav from './Nav';
+import Footer from './Footer';
 
 
 const TestPost=()=> {
 
     return (
+        <div><Nav/>
 <div className='post-container'>
+
 
         <div className = 'cards'>
             {
@@ -31,9 +35,11 @@ const TestPost=()=> {
                         </footer>
 
                     </div>
-                    </div>)
+                    </div>
+                    )
                 }
         </div>
+    </div><Footer />
     </div>
     );
 
