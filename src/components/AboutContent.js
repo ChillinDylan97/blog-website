@@ -1,5 +1,5 @@
 import React from 'react';
-import post from '../post';
+import aboutPost from '../aboutPost';
 
 const AboutContent=()=> {
 
@@ -8,7 +8,7 @@ const AboutContent=()=> {
     
         <div className = 'about-cards'>
             {
-                post.map(post=><div key={post.id} className='about-items'>
+                aboutPost.map(aboutPost=><div key={aboutPost.id} className='about-items'>
                     
                     <div className='about-content'>
                         <div className='about-heading'>
@@ -17,8 +17,8 @@ const AboutContent=()=> {
                         
                         </div>
                         
-                        <img src={post.image}/>
-                        <p>{post.description}</p>
+                        <img src={aboutPost.image}/>
+                        <p>{aboutPost.description}</p>
                         
                         
                     </div>

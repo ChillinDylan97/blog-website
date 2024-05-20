@@ -1,62 +1,75 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Nav from "./Nav";
+import React, { useState, useHistory } from 'react';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import { useNavigate } from 'react-router-dom';
+import Nav from './Nav';
+import Footer from './Footer';
+
 
 const CreatePost = () => {
-    const [title, setTitle] = useState("");
-    const [content, setContent] = useState("");
+  
+  const [title, setTitle] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log({ title, content });
-        setContent("");
-        setTitle("");
+  const [description, setDescription] = useState('');
+  const [thumbnail, setThumbnail] = useState('');
+  const history = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const postData = {
+      title: title,
+      
+      description: description,
+      thumbnail: thumbnail,
     };
 
-    return (
-        <div>
-            <Nav />
-            <nav className="navbar">
-                <Link to="/" className="logo">
-                    <h2>MyBlog</h2>
-                </Link>
+    
 
-                <div>
-                    <button className="createPostBtn logOut">Log out</button>
-                </div>
-            </nav>
-            <main className="main">
-                <h2 className="heading">Create post</h2>
-                <form className="createPost_form" onSubmit={handleSubmit}>
-                    <label htmlFor="title" className="label">
-                        Title
-                    </label>
-                    <input
-                        type="text"
-                        className="createPost_title"
-                        id="title"
-                        name="title"
-                        value={title}
-                        required
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
-                    <label htmlFor="content" className="label">
-                        Content
-                    </label>
-                    <textarea
-                        rows={10}
-                        className="createPost_content"
-                        value={content}
-                        required
-                        onChange={(e) => setContent(e.target.value)}
-                    />
-                    <button className="createPostBtn submitBtn" type="submit">
-                        Create Post
-                    </button>
-                </form>
-            </main>
-        </div>
-    );
-};
+  };
 
+  const modules = {
+    toolbar: [
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image'],
+      ['clean']
+    ],
+  };
+
+  const formats = [
+    'header',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image',
+  ];
+
+  return (
+    <div>
+  <Nav/>
+    <section className="create-post">
+      <div className="container">
+        <h2>Create Post</h2>
+
+        <form className="create-post_form" onSubmit={handleSubmit}>
+          <input type="text" placeholder='Title' value={title} onChange={e => setTitle(e.target.value)} autoFocus /><br /><br />
+
+
+
+          <ReactQuill modules={modules} formats={formats} value={description} onChange={setDescription} className='descBox' /><br /><br />
+
+          
+
+          <button type="submit" className='btn-primary'>Create</button>
+        </form>
+
+        {/* Add code here to display a message or redirect to a new page after submitting the form. */}
+
+      </div>
+    </section>
+    <Footer/>
+    </div>
+  )
+}
 export default CreatePost;

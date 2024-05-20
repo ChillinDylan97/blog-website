@@ -1,6 +1,6 @@
 import React from 'react';
-import post from '../post';
-
+import Post from '../post';
+import Main2 from './Main2';
 import { Link } from 'react-router-dom';
 
 
@@ -11,15 +11,15 @@ const Main=()=> {
 
         <div className = 'cards'>
             { 
-                post.map(post=><div key={post.id} className='post-items'>
+                Post.map(Post=><div key={Post.id} className='post-items'>
 
                     <div className='post-content'>
                         <div className='heading'>
-                        <h2><Link to="/testPost">{post.title}</Link>  </h2>
+                        <h2><Link to="/testPost">{Post.title}</Link>  </h2>
 
                         </div>
                        
-                        <img src={post.image}/>
+                        <img src={Post.image}/>
                         
 
                         <footer class="post-footer"> 

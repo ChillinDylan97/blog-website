@@ -5,16 +5,12 @@ const Header=() => {
         <header className='header'>
             <section>
                 <div className='banner'>
-                    <h2>Title</h2>
-                    <h3>Subtitle</h3>
-                    <p>Description</p>
-                    <a href="/Temporary">
-
-                    </a>
+                    <h2>This Is The Title For The Blog Website</h2>
+                <h3>And this is the neat little subtitle that goes underneath!</h3>
+                    
+                    
                 </div>
-                <div className='banner-img'>
-                    <img src={bannerImg} alt='' />
-                </div>
+                
             </section>
         </header>
     )

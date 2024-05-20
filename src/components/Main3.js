@@ -1,45 +1,43 @@
-import Nav from './Nav';
-import Footer from './Footer';
+import React from 'react';
 import Post from '../post';
-import CommentSection from './CommentSection';
 
-const post = Post;
+import { Link } from 'react-router-dom';
 
-const TestPost=()=> {
+
+const Main3=()=> {
 
     return (
-        <div><Nav/>
 <div className='post-container'>
+
         <div className = 'cards'>
-            {
-                post.map(post=><div key={post.id} className='post-items'>
+            { 
+                Post.map(Post=><div key={Post.id} className='post-items'>
 
                     <div className='post-content'>
                         <div className='heading'>
-                        <h2> {post.title} </h2>
+                        <h2><Link to="/testPost3">{Post.title}</Link>  </h2>
 
                         </div>
-                        <div className = 'date'><h5>May 1, 2025</h5></div>
-                        <img src={post.image}/>
-                        <p>{post.description}</p>
+                       
+                        <img src={Post.image}/>
+                        
 
-                        <footer class="post-footer">
+                        <footer class="post-footer"> 
+                        <div className = 'date'><h5>May 1, 2025</h5></div>
                             <span className="tags">Tags:&nbsp;
                                 <a href="https://www.linkedin.com/in/dylanjgilbert/" rel="tag">tag placeholder</a>, &nbsp;
                                 <a href="https://www.linkedin.com/in/dylanjgilbert/" rel="tag">tag placeholder 2</a> &nbsp;
                             </span>
 
-                            <CommentSection post={post}/>
+                            
                         </footer>
 
                     </div>
-                    </div>
-                    )
+                    </div>)
                 }
         </div>
-    </div><Footer />
     </div>
     );
 
 }
-export default TestPost;
+export default Main3;
